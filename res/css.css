@@ -1,0 +1,165 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.board, tile {
+	border: 1px solid #eee;
+}
+
+.board {
+	display: block;
+	width: 270px;
+	height: 270px;
+	border-bottom-style: none;
+	border-left-style: none;
+	overflow: hidden;
+	position: absolute;
+	margin: auto;
+	top: 60px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.board tile {
+	display: block;
+	float: left;
+	text-align: center;
+	width: 29px;
+	height: 29px;
+	font: 12px/29px "Adobe Gothic Std";
+	border-top-style: none;
+	border-right-style: none;
+	overflow: hidden;
+	position: relative;
+	color: #000;
+}
+
+.board tile number,
+.board tile possibles {
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.board tile number {
+	z-index: 100;
+}
+
+.board tile possibles {
+	z-index: 50;
+	font-size: 8px;
+	color: #e1e8d7;
+	line-height: 8px;
+	text-align: left;
+	padding: 2px 5px;
+	font-weight: bold;
+}
+
+.board:hover possibles {
+	color: #2d9d05;
+}
+
+.board tile possibles .nil {
+	color: #fff;
+	opacity: 0;
+}
+
+.board tile:hover {
+	background-color: #ffffec;
+	font-weight: bold;
+	cursor: default;
+}
+
+.tools {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 60px;
+	border-bottom: 1px solid #eee;
+}
+
+.tools a {
+	font: 14px/26px "Adobe Gothic Std";
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+	float: left;
+	border: 2px solid #000;
+	height: 26px;
+	padding: 0 10px;
+	margin: 15px 0 15px 15px;
+	opacity: .4;
+}
+
+.tools a.main {
+	color: #009138;
+	border-color: #009138;
+	opacity: 1;
+}
+
+.tools a.main:hover {
+	border-color: #12bf00;
+	color: #12bf00;
+	opacity: 1;
+}
+
+.tools a:hover {
+	opacity: .3;
+}
+
+.tools a:active {
+	position: relative;
+	top: 1px;
+}
+
+/*hardcoded quads. for convenience*/
+
+.board tile:nth-child(19),
+.board tile:nth-child(20),
+.board tile:nth-child(21),
+.board tile:nth-child(22),
+.board tile:nth-child(23),
+.board tile:nth-child(24),
+.board tile:nth-child(25),
+.board tile:nth-child(26),
+.board tile:nth-child(27),
+
+.board tile:nth-child(46),
+.board tile:nth-child(47),
+.board tile:nth-child(48),
+.board tile:nth-child(49),
+.board tile:nth-child(50),
+.board tile:nth-child(51),
+.board tile:nth-child(52),
+.board tile:nth-child(53),
+.board tile:nth-child(54) {
+	border-bottom-color: #bbb;
+}
+
+.board tile:nth-child(4),
+.board tile:nth-child(13),
+.board tile:nth-child(22),
+.board tile:nth-child(31),
+.board tile:nth-child(40),
+.board tile:nth-child(49),
+.board tile:nth-child(58),
+.board tile:nth-child(67),
+.board tile:nth-child(76),
+
+.board tile:nth-child(7),
+.board tile:nth-child(16),
+.board tile:nth-child(25),
+.board tile:nth-child(34),
+.board tile:nth-child(43),
+.board tile:nth-child(52),
+.board tile:nth-child(61),
+.board tile:nth-child(70),
+.board tile:nth-child(79) {
+	border-left-color: #bbb;
+}
